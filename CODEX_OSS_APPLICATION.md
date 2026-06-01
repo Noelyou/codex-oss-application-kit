@@ -4,7 +4,7 @@ Apply here: https://openai.com/form/codex-for-oss/
 
 Official program page: https://developers.openai.com/community/codex-for-oss
 
-Status: blocked until a qualifying public open-source repository is provided or created.
+Status: project is being built locally; GitHub publication and real public repository URL are still required before submission.
 
 ## Confirmed So Far
 
