@@ -4,15 +4,19 @@ Apply here: https://openai.com/form/codex-for-oss/
 
 Official program page: https://developers.openai.com/community/codex-for-oss
 
-Status: project is being built locally; GitHub publication and real public repository URL are still required before submission.
+Status: public GitHub repository has been created and local origin is configured; push to `main` still needs confirmation before final submission.
 
 ## Confirmed So Far
 
 - GitHub username: Noelyou
 - ChatGPT/OpenAI email candidate: rollingdoormaster@gmail.com
-- Local git remote: not configured
-- Repositories visible through the GitHub connector: 0
-- Public GitHub API result for https://github.com/Noelyou: public_repos = 0
+- Local git remote: https://github.com/Noelyou/codex-oss-application-kit.git
+- Public repository URL: https://github.com/Noelyou/codex-oss-application-kit
+- Local implementation branch: codex/oss-application-kit
+- Latest local commit: aa6aa40
+- Local tests: `python -m pytest -v` passed with 14 tests
+- GitHub connector status: unavailable due to revoked OAuth token
+- Remote push status: not verified from this sandbox due to GitHub network/push restrictions
 
 ## Official Eligibility Notes
 
@@ -30,10 +34,10 @@ Status: project is being built locally; GitHub publication and real public repos
 | Last name | TODO |
 | Email | rollingdoormaster@gmail.com |
 | GitHub username | Noelyou |
-| GitHub repository URL | TODO: public repository URL |
-| Role | TODO: Primary maintainer or Core maintainer |
-| Why does this repository qualify? | Use one of the drafts below, replacing TODO values |
-| Interested in | Select API credits for my project; also select Codex Security if relevant |
+| GitHub repository URL | https://github.com/Noelyou/codex-oss-application-kit |
+| Role | Primary maintainer |
+| Why does this repository qualify? | Use the draft below after confirming the repository has been pushed |
+| Interested in | Select API credits for my project; optionally select Codex Security if you want security review help |
 | OpenAI Organization ID | TODO: find it at https://platform.openai.com/ |
 | How will you use API credits? | Use the draft below |
 | Anything else? | Use the optional draft below or leave blank |
@@ -42,16 +46,16 @@ Status: project is being built locally; GitHub publication and real public repos
 
 ### Why does this repository qualify?
 
-Version A: project has clear usage metrics.
+Use this only after the repository has been pushed and the public page shows the project files.
 
 ```text
-I am a TODO primary/core maintainer of TODO_REPO, an active open-source project with TODO stars, TODO monthly downloads/users, and ongoing maintenance across issues, pull requests, releases, and code quality. The project is used by TODO ecosystem/users, so faster review, triage, and release work directly benefits downstream developers.
+I am the primary maintainer of codex-oss-application-kit, a public open-source Python CLI that helps maintainers prepare truthful Codex for Open Source application drafts from structured project data. The repository includes a tested CLI, YAML profile loading, completeness checks, Markdown rendering, examples, and open-source contribution documentation. Codex support would help maintain issue triage, pull request review, release preparation, tests, and template updates as the official application process changes.
 ```
 
-Version B: project is important even if public metrics are still growing.
+Shorter conservative version:
 
 ```text
-I am a TODO primary/core maintainer of TODO_REPO, an active public open-source project that serves an important role in TODO ecosystem/use case. Although its public metrics are still growing, it requires ongoing issue triage, PR review, release management, and security/quality maintenance that would benefit from Codex-assisted workflows.
+I am the primary maintainer of codex-oss-application-kit, a new public open-source Python CLI for maintainers preparing truthful Codex for Open Source application drafts. It includes tests, examples, documentation, and a maintainer workflow focused on issue triage, PR review, release notes, and keeping application templates aligned with the official process.
 ```
 
 ### How will you use API credits for your project?
@@ -81,20 +85,14 @@ I can provide additional evidence of maintainer access, release history, issue t
 
 1. First name
 2. Last name
-3. Public GitHub repository URL
-4. Maintainer role: Primary maintainer or Core maintainer
-5. Project evidence: stars, monthly downloads/users, dependent projects, issue/PR/release activity, or ecosystem importance
-6. OpenAI Organization ID
-7. Whether to request Codex Security in addition to API credits
+3. Confirm the public GitHub repository has been pushed and contains project files
+4. OpenAI Organization ID
+5. Whether to request Codex Security in addition to API credits
 
 ## Current Blocker
 
-The Codex for Open Source form requires a public GitHub repository URL. The connected GitHub account `Noelyou` currently has zero public repositories, and this local workspace has no configured GitHub remote. A submission cannot be completed honestly until one of these is true:
-
-1. You provide another public repository where you are a primary or core maintainer.
-2. You make an existing repository public and provide its URL.
-3. You create and maintain a new public open-source repository, then apply once it has credible activity and purpose.
+The Codex for Open Source form requires a public GitHub repository with verifiable project files. The repository URL now exists, but this sandbox cannot verify whether the local commits have been pushed to GitHub. A submission should wait until the GitHub page shows the README, source code, tests, license, and documentation.
 
 ## Best Next Action
 
-Provide the public GitHub repository URL and your maintainer role. If you do not yet have a qualifying repository, the practical path is to publish or identify a real open-source project first, then use the drafts above to complete the application.
+Confirm that `git push -u origin HEAD:main` has completed successfully and that the public repository page shows the project files. Then fill in your first name, last name, and OpenAI Organization ID before submitting the official form.
