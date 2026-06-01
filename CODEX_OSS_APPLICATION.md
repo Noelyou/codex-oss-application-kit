@@ -4,7 +4,7 @@ Apply here: https://openai.com/form/codex-for-oss/
 
 Official program page: https://developers.openai.com/community/codex-for-oss
 
-Status: public GitHub repository has been created and pushed to `main`; final submission still requires first name, last name, OpenAI Organization ID, and final user review.
+Status: ready for official form submission; final user review is still required before submitting.
 
 ## Confirmed So Far
 
@@ -30,15 +30,15 @@ Status: public GitHub repository has been created and pushed to `main`; final su
 
 | Field | Suggested value |
 | --- | --- |
-| First name | TODO |
-| Last name | TODO |
+| First name | You |
+| Last name | Ping ji |
 | Email | rollingdoormaster@gmail.com |
 | GitHub username | Noelyou |
 | GitHub repository URL | https://github.com/Noelyou/codex-oss-application-kit |
 | Role | Primary maintainer |
 | Why does this repository qualify? | Use the draft below |
 | Interested in | Select API credits for my project; optionally select Codex Security if you want security review help |
-| OpenAI Organization ID | TODO: find it at https://platform.openai.com/ |
+| OpenAI Organization ID | org-E1i6jPZYsZXZzEGIkCBoHgUr |
 | How will you use API credits? | Use the draft below |
 | Anything else? | Use the optional draft below or leave blank |
 
@@ -77,24 +77,47 @@ I can provide additional evidence of maintainer access, release history, issue t
 - [ ] Repository URL is correct.
 - [ ] Role is accurate: Primary maintainer or Core maintainer.
 - [ ] Qualification text includes real metrics or ecosystem importance.
-- [ ] OpenAI Organization ID is filled in.
+- [x] OpenAI Organization ID is filled in.
 - [ ] Email matches the ChatGPT account that should receive Pro access.
 - [ ] Form terms are reviewed before submission.
 
 ## Missing Information
 
-1. First name
-2. Last name
-3. OpenAI Organization ID
-4. Whether to request Codex Security in addition to API credits
+1. Whether to request Codex Security in addition to API credits
+2. Final user review before submitting the official form
 
 ## Current Blocker
 
-The Codex for Open Source form requires a public GitHub repository with verifiable project files. The repository URL exists and the `main` branch has been pushed and verified. Final submission still requires user-specific identity and OpenAI organization fields.
+The Codex for Open Source form requires a public GitHub repository with verifiable project files. The repository URL exists, the `main` branch has been pushed and verified, and the identity plus OpenAI organization fields are filled in.
 
 ## Best Next Action
 
-Fill in your first name, last name, and OpenAI Organization ID before submitting the official form. If you want issue-maintenance evidence before submitting, create the planned first issue listed below.
+Review the final form fields below and submit the official form. If you want issue-maintenance evidence before submitting, create the planned first issue listed below.
+
+## Final Form Values
+
+```text
+First name:
+You
+
+Last name:
+Ping ji
+
+Email:
+rollingdoormaster@gmail.com
+
+GitHub username:
+Noelyou
+
+GitHub repository URL:
+https://github.com/Noelyou/codex-oss-application-kit
+
+Role:
+Primary maintainer
+
+OpenAI Organization ID:
+org-E1i6jPZYsZXZzEGIkCBoHgUr
+```
 
 ## Planned First Issue
 
