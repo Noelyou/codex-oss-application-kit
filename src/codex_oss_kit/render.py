@@ -16,10 +16,10 @@ def render_application(profile: ApplicationProfile) -> str:
 
     qualify_answer = (
         f"I am a {profile.project.maintainer_role} of {profile.project.name}, "
-        f"an active open-source project. {profile.project.description} "
+        f"an open-source project. {profile.project.description} "
         f"Relevant evidence: {evidence_text} "
-        "Codex support would help maintain the project through faster review, triage, "
-        "release preparation, and quality improvements for downstream users."
+        "Codex support would help with maintainer workflows such as review, triage, "
+        "release preparation, and quality improvements."
     )
 
     api_answer = (

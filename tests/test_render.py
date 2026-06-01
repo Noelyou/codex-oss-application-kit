@@ -34,3 +34,5 @@ def test_render_application_includes_form_answers():
         "We will use API credits for Codex-assisted maintainer workflows"
         in rendered
     )
+    assert "an active open-source project" not in rendered
+    assert "downstream users" not in rendered
