@@ -41,9 +41,14 @@ openai:
     assert profile.requested_support == ["API credits"]
 
 
-def test_load_application_profile_rejects_non_object_nested_sections(tmp_path):
+@pytest.mark.parametrize("section_name", ["maintainer", "project", "openai"])
+def test_load_application_profile_rejects_non_object_nested_sections(
+    tmp_path, section_name
+):
     config = tmp_path / "project.yml"
-    config.write_text("maintainer: nope\n", encoding="utf-8")
+    config.write_text(f"{section_name}: nope\n", encoding="utf-8")
 
-    with pytest.raises(ConfigError, match="maintainer section must be a YAML object"):
+    with pytest.raises(
+        ConfigError, match=f"{section_name} section must be a YAML object"
+    ):
         load_application_profile(config)
