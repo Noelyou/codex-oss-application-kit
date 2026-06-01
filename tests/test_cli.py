@@ -53,3 +53,15 @@ openai: {}
     captured = capsys.readouterr()
     assert exit_code == 1
     assert "ERROR: Maintainer first name is missing." in captured.out
+
+
+def test_cli_check_reports_success_for_complete_profile(tmp_path, capsys):
+    config = tmp_path / "project.yml"
+    config.write_text(VALID_CONFIG, encoding="utf-8")
+
+    exit_code = main(["check", str(config)])
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "OK: application profile is complete." in captured.out
+    assert captured.err == ""

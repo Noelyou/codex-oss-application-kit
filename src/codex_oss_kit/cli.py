@@ -46,4 +46,7 @@ def main(argv: list[str] | None = None) -> int:
     for issue in result.issues:
         print(f"{issue.severity.upper()}: {issue.message}")
 
+    if result.ok:
+        print("OK: application profile is complete.")
+
     return 0 if result.ok else 1
