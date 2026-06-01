@@ -41,6 +41,58 @@ openai:
     assert profile.requested_support == ["API credits"]
 
 
+def test_load_application_profile_treats_null_scalars_as_empty_strings(tmp_path):
+    config = tmp_path / "project.yml"
+    config.write_text(
+        """
+maintainer:
+  first_name:
+  last_name: You
+project:
+  name: codex-oss-application-kit
+openai: {}
+""",
+        encoding="utf-8",
+    )
+
+    profile = load_application_profile(config)
+
+    assert profile.maintainer.first_name == ""
+    assert profile.maintainer.full_name == "You"
+
+
+def test_load_application_profile_ignores_null_list_items(tmp_path):
+    config = tmp_path / "project.yml"
+    config.write_text(
+        """
+maintainer: {}
+project:
+  evidence:
+    - Public repository with tests.
+    -
+    - Maintainer workflow focused on truthful application preparation.
+openai: {}
+""",
+        encoding="utf-8",
+    )
+
+    profile = load_application_profile(config)
+
+    assert profile.project.evidence == [
+        "Public repository with tests.",
+        "Maintainer workflow focused on truthful application preparation.",
+    ]
+    assert "None" not in profile.project.evidence
+
+
+def test_load_application_profile_wraps_invalid_utf8_as_config_error(tmp_path):
+    config = tmp_path / "project.yml"
+    config.write_bytes(b"\xff\xfe\xfa")
+
+    with pytest.raises(ConfigError, match="Could not read config file"):
+        load_application_profile(config)
+
+
 @pytest.mark.parametrize("section_name", ["maintainer", "project", "openai"])
 def test_load_application_profile_rejects_non_object_nested_sections(
     tmp_path, section_name
