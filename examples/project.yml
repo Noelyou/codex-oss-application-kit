@@ -1,0 +1,25 @@
+maintainer:
+  first_name: Noel
+  last_name: You
+  email: rollingdoormaster@gmail.com
+  github_username: Noelyou
+
+project:
+  name: codex-oss-application-kit
+  repository_url: https://github.com/Noelyou/codex-oss-application-kit
+  maintainer_role: primary maintainer
+  description: Helps open-source maintainers prepare truthful Codex for Open Source application drafts.
+  evidence:
+    - Public repository with a tested Python CLI.
+    - Documentation for ethical, truthful application preparation.
+    - Maintainer workflow for issue triage, release notes, and application evidence collection.
+
+openai:
+  organization_id: org_example_replace_me
+  requested_support:
+    - API credits
+    - ChatGPT Pro with Codex
+  api_credit_use:
+    - Review pull requests and suggest test coverage.
+    - Triage issues and draft maintainer responses.
+    - Draft release notes and regression checklists.
