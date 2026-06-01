@@ -63,5 +63,5 @@ def test_cli_check_reports_success_for_complete_profile(tmp_path, capsys):
 
     captured = capsys.readouterr()
     assert exit_code == 0
-    assert "OK: application profile is complete." in captured.out
+    assert captured.out == "OK: application profile is complete.\n"
     assert captured.err == ""
