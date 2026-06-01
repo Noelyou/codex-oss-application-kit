@@ -6,13 +6,13 @@ maintainer:
 
 project:
   name: codex-oss-application-kit
-  repository_url: https://github.com/Noelyou/codex-oss-application-kit
+  repository_url: https://github.com/YOUR_USERNAME/YOUR_REPOSITORY
   maintainer_role: primary maintainer
   description: Helps open-source maintainers prepare truthful Codex for Open Source application drafts.
   evidence:
-    - Public repository with a tested Python CLI.
-    - Documentation for ethical, truthful application preparation.
-    - Maintainer workflow for issue triage, release notes, and application evidence collection.
+    - Replace this with your public repository URL and current publication status before applying.
+    - Replace this with real evidence for tested commands, releases, or user-facing documentation.
+    - Replace this with maintainer workflow evidence such as issue triage, release notes, or application evidence collection.
 
 openai:
   organization_id: org_example_replace_me
