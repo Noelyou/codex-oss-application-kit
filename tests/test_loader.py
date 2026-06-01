@@ -1,6 +1,8 @@
 from pathlib import Path
 
-from codex_oss_kit.loader import load_application_profile
+import pytest
+
+from codex_oss_kit.loader import ConfigError, load_application_profile
 
 
 def test_load_application_profile_reads_nested_yaml(tmp_path):
@@ -37,3 +39,11 @@ openai:
     assert profile.project.name == "codex-oss-application-kit"
     assert profile.openai_organization_id == "org_example"
     assert profile.requested_support == ["API credits"]
+
+
+def test_load_application_profile_rejects_non_object_nested_sections(tmp_path):
+    config = tmp_path / "project.yml"
+    config.write_text("maintainer: nope\n", encoding="utf-8")
+
+    with pytest.raises(ConfigError, match="maintainer section must be a YAML object"):
+        load_application_profile(config)

@@ -1,3 +1,4 @@
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
@@ -19,6 +20,15 @@ def _string_list(value: Any) -> list[str]:
     return [text] if text else []
 
 
+def _section(raw: dict[str, Any], name: str) -> Mapping[str, Any]:
+    value = raw.get(name)
+    if value is None:
+        return {}
+    if not isinstance(value, Mapping):
+        raise ConfigError(f"{name} section must be a YAML object.")
+    return value
+
+
 def load_application_profile(path: str | Path) -> ApplicationProfile:
     config_path = Path(path)
     if not config_path.exists():
@@ -32,9 +42,9 @@ def load_application_profile(path: str | Path) -> ApplicationProfile:
     if not isinstance(raw, dict):
         raise ConfigError("Config file must contain a YAML object at the top level.")
 
-    maintainer_raw = raw.get("maintainer") or {}
-    project_raw = raw.get("project") or {}
-    openai_raw = raw.get("openai") or {}
+    maintainer_raw = _section(raw, "maintainer")
+    project_raw = _section(raw, "project")
+    openai_raw = _section(raw, "openai")
 
     return ApplicationProfile(
         maintainer=MaintainerProfile(
