@@ -4,7 +4,7 @@ Apply here: https://openai.com/form/codex-for-oss/
 
 Official program page: https://developers.openai.com/community/codex-for-oss
 
-Status: public GitHub repository has been created and local origin is configured; push to `main` still needs confirmation before final submission.
+Status: public GitHub repository has been created and pushed to `main`; final submission still requires first name, last name, OpenAI Organization ID, and final user review.
 
 ## Confirmed So Far
 
@@ -13,10 +13,10 @@ Status: public GitHub repository has been created and local origin is configured
 - Local git remote: https://github.com/Noelyou/codex-oss-application-kit.git
 - Public repository URL: https://github.com/Noelyou/codex-oss-application-kit
 - Local implementation branch: codex/oss-application-kit
-- Latest local commit: aa6aa40
+- Published main commit: 2cfc9b59d8bd55995710b5f6f5fa86c7ad6174b6
 - Local tests: `python -m pytest -v` passed with 14 tests
 - GitHub connector status: unavailable due to revoked OAuth token
-- Remote push status: not verified from this sandbox due to GitHub network/push restrictions
+- Remote push status: verified with `git ls-remote --heads origin`
 
 ## Official Eligibility Notes
 
@@ -36,7 +36,7 @@ Status: public GitHub repository has been created and local origin is configured
 | GitHub username | Noelyou |
 | GitHub repository URL | https://github.com/Noelyou/codex-oss-application-kit |
 | Role | Primary maintainer |
-| Why does this repository qualify? | Use the draft below after confirming the repository has been pushed |
+| Why does this repository qualify? | Use the draft below |
 | Interested in | Select API credits for my project; optionally select Codex Security if you want security review help |
 | OpenAI Organization ID | TODO: find it at https://platform.openai.com/ |
 | How will you use API credits? | Use the draft below |
@@ -46,7 +46,7 @@ Status: public GitHub repository has been created and local origin is configured
 
 ### Why does this repository qualify?
 
-Use this only after the repository has been pushed and the public page shows the project files.
+Use this draft for the official form.
 
 ```text
 I am the primary maintainer of codex-oss-application-kit, a public open-source Python CLI that helps maintainers prepare truthful Codex for Open Source application drafts from structured project data. The repository includes a tested CLI, YAML profile loading, completeness checks, Markdown rendering, examples, and open-source contribution documentation. Codex support would help maintain issue triage, pull request review, release preparation, tests, and template updates as the official application process changes.
@@ -85,14 +85,29 @@ I can provide additional evidence of maintainer access, release history, issue t
 
 1. First name
 2. Last name
-3. Confirm the public GitHub repository has been pushed and contains project files
-4. OpenAI Organization ID
-5. Whether to request Codex Security in addition to API credits
+3. OpenAI Organization ID
+4. Whether to request Codex Security in addition to API credits
 
 ## Current Blocker
 
-The Codex for Open Source form requires a public GitHub repository with verifiable project files. The repository URL now exists, but this sandbox cannot verify whether the local commits have been pushed to GitHub. A submission should wait until the GitHub page shows the README, source code, tests, license, and documentation.
+The Codex for Open Source form requires a public GitHub repository with verifiable project files. The repository URL exists and the `main` branch has been pushed and verified. Final submission still requires user-specific identity and OpenAI organization fields.
 
 ## Best Next Action
 
-Confirm that `git push -u origin HEAD:main` has completed successfully and that the public repository page shows the project files. Then fill in your first name, last name, and OpenAI Organization ID before submitting the official form.
+Fill in your first name, last name, and OpenAI Organization ID before submitting the official form. If you want issue-maintenance evidence before submitting, create the planned first issue listed below.
+
+## Planned First Issue
+
+Title:
+
+```text
+Add optional public GitHub metadata checks
+```
+
+Body:
+
+```text
+The first release is intentionally offline-only. A useful next step is an optional check that reads public GitHub repository metadata without authentication and reports stars, forks, open issues, and last push time as maintainer evidence.
+
+This should remain optional and should not be used to fabricate qualification claims.
+```
